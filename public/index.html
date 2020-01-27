@@ -1,31 +1,39 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title></title>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
     <script type="text/javascript" src="js/require.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
     <script type="text/javascript">
-        (function () {
-            var config = {
-                baseUrl: 'js'
-            };
+      (function() {
+        var config = {
+          baseUrl: "js"
+        };
 
-            var dependencies = [
-                'customActivity'
-            ];
+        var dependencies = ["customActivity"];
 
-            require(config, dependencies);
-        })();
+        require(config, dependencies);
+      })();
     </script>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="step1" class="step">
-        <div class="slds-grid">
+      <!-- <div class="slds-grid">
 
             <main class="slds-col">
                
@@ -33,9 +41,68 @@
             </main>
             
 
+        </div> -->
+      <div class="container">
+        <div class="step" id="step1">
+          <div class="row card segment" id="click" onclick="clicked(this)">
+            <div class="col-8">
+              <h3>Click Conversion</h3>
+            </div>
+          </div>
+          <div class="row card segment" id="web" onclick="clicked(this)">
+            <div class="col-8">
+              <h3>Web Action</h3>
+            </div>
+          </div>
         </div>
-
+        <div class="step" id="step2">
+          <div class="row">
+            <form id="activity-data">
+              <table>
+                <tr>
+                  <td>
+                    <label for="uid">UID Column Name</label>
+                  </td>
+                  <td>
+                    <input type="text" id="uid" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="dateinput">Date</label>
+                  </td>
+                  <td>
+                    <input type="date" id="dateinput" />
+                  </td>
+                </tr>
+              </table>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
-
+    <script>
+      // var clicked = '';
+      // $('#click').click(function () {
+      //     $('#click').addClass('shadow p-3 mb-5 bg-white rounded');
+      // });
+      // $('#web').click(function () {
+      //     $('#web').addClass('shadow p-3 mb-5 bg-white rounded');
+      // });
+      function clicked(event) {
+        var clickedSegment = event.id;
+        if (clickedSegment == "click") {
+          $("#click").click(function() {
+            $("#click").addClass("shadow");
+            $("#web").removeClass("shadow");
+          });
+        } else if (clickedSegment == "web") {
+          $("#click").click(function() {
+            $("#click").removeClass("shadow");
+            $("#web").addClass("shadow");
+          });
+        }
+      }
+    </script>
+  </body>
 </html>

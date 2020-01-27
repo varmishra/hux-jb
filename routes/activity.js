@@ -83,12 +83,21 @@ exports.execute = function (req, res) {
         }
 
         if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
-            
-            // decoded in arguments
-            var decodedArgs = decoded.inArguments[0];
-            
-            logData(req);
-            res.send(200, 'Execute');
+            var customerId = decoded.inArguments[0].emailAddress;
+            fetch('https://cors-anywhere.herokuapp.com/https://amc-creative-content.mgnt-xspdev.in/intelligent-content/hux_content_engine-12_17_2019.json').then(function (response) {
+                    return response.json();
+                }).then(function (obj) {
+                    var i;
+                    for (i = 0; i < Object.keys(obj.content).length; i++) {
+                        if (obj.content[i].CUSTOMER_INDID == customerId) {
+                            console.log(obj.content[i].ContentUrl);
+                        }
+                    }
+                })
+                .catch(function (error) {
+                    console.error(error)
+                });
+
         } else {
             console.error('inArguments invalid.');
             return res.status(400).end();

@@ -4,9 +4,20 @@ body {
 }
 
 .step {
-    display: none;
+    /* display: none; */
 }
 
 #step1 {
     display: block;
+}
+
+.segment {
+    margin-bottom: 1%;
+    padding: 1%;
+    cursor: pointer;
+}
+
+.shadow {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+    border-radius: .25rem;
 }
