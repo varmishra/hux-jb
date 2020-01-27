@@ -13,6 +13,43 @@
       "step1Label": "Select Action"
     }
   },
+  "outcomes": [{
+      "arguments": {
+        "branchResult": "likely",
+        "some argument": "passed from config.json for likely"
+      },
+      "metaData": {
+        "label": "Likely"
+      }
+    },
+    {
+      "arguments": {
+        "branchResult": "veryLikely",
+        "some argument": "passed from config.json for very likely"
+      },
+      "metaData": {
+        "label": "Very Likely"
+      }
+    },
+    {
+      "arguments": {
+        "branchResult": "neutral",
+        "some argument": "passed from config.json for neutral"
+      },
+      "metaData": {
+        "label": "Neutral"
+      }
+    },
+    {
+      "arguments": {
+        "branchResult": "unlikely",
+        "some argument": "passed from config.json for unlikely"
+      },
+      "metaData": {
+        "label": "Unlikely"
+      }
+    }
+  ],
   "arguments": {
     "execute": {
       "inArguments": [{
