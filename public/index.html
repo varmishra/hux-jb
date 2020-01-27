@@ -43,7 +43,7 @@
 
         </div> -->
       <div class="container">
-        <div class="step" id="step1">
+        <!-- <div class="step" id="step1">
           <div class="row card segment" id="click" onclick="clicked(this)">
             <div class="col-8">
               <h3>Click Conversion</h3>
@@ -54,33 +54,42 @@
               <h3>Web Action</h3>
             </div>
           </div>
-        </div>
-        <div class="step" id="step2">
-          <div class="row">
-            <form id="activity-data">
-              <table>
-                <tr>
-                  <td>
-                    <label for="uid">UID Column Name</label>
-                  </td>
-                  <td>
-                    <input type="text" id="uid" />
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <label for="dateinput">Date</label>
-                  </td>
-                  <td>
-                    <input type="date" id="dateinput" />
-                  </td>
-                </tr>
-              </table>
-            </form>
+        </div> -->
+        <form id="choose-action">
+          <div class="radio-group">
+            <div class="radio" data-value="click_conversion">
+              Click Conversion
+            </div>
+            <div class="radio" data-value="web_conversion">Web Action</div>
           </div>
-        </div>
+        </form>
       </div>
     </div>
+    <div class="step" id="step2">
+      <div class="row">
+        <form id="activity-data">
+          <table>
+            <tr>
+              <td>
+                <label for="uid">UID Column Name</label>
+              </td>
+              <td>
+                <input type="text" id="uid" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="dateinput">Date</label>
+              </td>
+              <td>
+                <input type="date" id="dateinput" />
+              </td>
+            </tr>
+          </table>
+        </form>
+      </div>
+    </div>
+
     <script>
       // var clicked = '';
       // $('#click').click(function () {
@@ -89,20 +98,35 @@
       // $('#web').click(function () {
       //     $('#web').addClass('shadow p-3 mb-5 bg-white rounded');
       // });
-      function clicked(event) {
-        var clickedSegment = event.id;
-        if (clickedSegment == "click") {
-          $("#click").click(function() {
-            $("#click").addClass("shadow");
-            $("#web").removeClass("shadow");
-          });
-        } else if (clickedSegment == "web") {
-          $("#click").click(function() {
-            $("#click").removeClass("shadow");
-            $("#web").addClass("shadow");
-          });
-        }
-      }
+      //   function clicked(event) {
+      //     var clickedSegment = event.id;
+      //     if (clickedSegment == "click") {
+      //       $("#click").click(function() {
+      //         $("#click").addClass("shadow");
+      //         $("#web").removeClass("shadow");
+      //       });
+      //     } else if (clickedSegment == "web") {
+      //       $("#click").click(function() {
+      //         $("#click").removeClass("shadow");
+      //         $("#web").addClass("shadow");
+      //       });
+      //     }
+      //   }
+      var staticUrl = "https://amc-creative-content.mgnt-xspdev.in/";
+      $(".radio-group .radio").click(function() {
+        $(this)
+          .parent()
+          .find(".radio")
+          .removeClass("selected");
+        $(this).addClass("selected");
+        var val = $(this).attr("data-value");
+        //alert(val);
+        // $(this)
+        //   .parent()
+        //   .find("input")
+        //   .val(val);
+        stepOneUrl = staticUrl + val + "/hux_intelligent_segment-";
+      });
     </script>
   </body>
 </html>

@@ -11,7 +11,7 @@ body {
     display: block;
 }
 
-.segment {
+/* .segment {
     margin-bottom: 1%;
     padding: 1%;
     cursor: pointer;
@@ -20,4 +20,23 @@ body {
 .shadow {
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
     border-radius: .25rem;
+} */
+
+.radio-group {
+    position: relative;
+}
+
+.radio {
+    display: inline-block;
+    /* width: 15px;
+    height: 15px;
+    border-radius: 100%; */
+    background-color: lightblue;
+    border: 2px solid lightblue;
+    cursor: pointer;
+    margin: 2px 0;
+}
+
+.radio.selected {
+    border-color: blue;
 }
