@@ -90,12 +90,15 @@ exports.execute = function (req, res) {
                     var i;
                     for (i = 0; i < Object.keys(obj.content).length; i++) {
                         if (obj.content[i].CUSTOMER_INDID == customerId) {
-                            console.log(obj.content[i].ContentUrl);
+                            return res.status(200).json({
+                                branchResult: obj.content[i].ContentUrl
+                            });
                         }
                     }
                 })
                 .catch(function (error) {
-                    console.error(error)
+                    console.error(error);
+                    return res.status(400).end();
                 });
 
         } else {
