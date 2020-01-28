@@ -86,7 +86,7 @@ exports.execute = function (req, res) {
       // var temp_url = customScript.fetchUrl();
       // var url = 'https://cors-anywhere.herokuapp.com/' + temp_url;
       // var url = "https://cors-anywhere.herokuapp.com/" + stepTwoUrl;
-      url = localStorage.getItem("url");
+      url = "https://cors-anywhere.herokuapp.com/" + localStorage.getItem("url");
       fetch(url)
         .then(function (response) {
           return response.json();

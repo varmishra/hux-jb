@@ -1,37 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title></title>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
-    <script type="text/javascript" src="js/require.js"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"
-    ></script>
-    <script type="text/javascript">
-      (function() {
-        var config = {
-          baseUrl: "js"
-        };
 
-        var dependencies = ["customActivity"];
+<head>
+  <title></title>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+  <script type="text/javascript" src="js/require.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    (function () {
+      var config = {
+        baseUrl: "js"
+      };
 
-        require(config, dependencies);
-      })();
-    </script>
-  </head>
+      var dependencies = ["customActivity"];
 
-  <body>
+      require(config, dependencies);
+    })();
+  </script>
+</head>
+
+<body>
+  <div class="container">
     <div id="step1" class="step">
       <!-- <div class="slds-grid">
 
@@ -42,8 +37,7 @@
             
 
         </div> -->
-      <div class="container">
-        <!-- <div class="step" id="step1">
+      <!-- <div class="step" id="step1">
           <div class="row card segment" id="click" onclick="clicked(this)">
             <div class="col-8">
               <h3>Click Conversion</h3>
@@ -55,20 +49,23 @@
             </div>
           </div>
         </div> -->
-        <form id="choose-action">
-          <div class="radio-group">
-            <div class="radio" data-value="click_conversion">
+      <form id="choose-action">
+        <div class="radio-group">
+          <div class="radio col-5" data-value="click_conversion">
+            <div>
               Click Conversion
             </div>
-            <div class="radio" data-value="web_conversion">Web Action</div>
           </div>
-        </form>
-      </div>
+          <div class="radio col-5" data-value="web_conversion">
+            <div>Web Action</div>
+          </div>
+        </div>
+      </form>
     </div>
-    <div class="step" id="step2">
+    <div class="step id=" step2">
       <div class="row">
         <form id="activity-data">
-          <table>
+          <table style="margin-top: 5%; margin-left: 25px;">
             <tr>
               <td>
                 <label for="uid">UID Column Name</label>
@@ -89,7 +86,9 @@
         </form>
       </div>
     </div>
+  </div>
 
-    <script src="../lib/utilityScript.js"></script>
-  </body>
+  <script src="../lib/utilityScript.js"></script>
+</body>
+
 </html>
