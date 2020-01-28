@@ -22,7 +22,6 @@ define([
 
         connection.trigger('requestTokens');
         connection.trigger('requestEndpoints');
-
     }
 
     function initialize(data) {
@@ -66,13 +65,13 @@ define([
     }
 
     function save() {
-        var postcardURLValue = $('#postcard-url').val();
-        var postcardTextValue = $('#postcard-text').val();
-
+        // var postcardURLValue = $('#postcard-url').val();
+        // var postcardTextValue = $('#postcard-text').val();
+        var uid = $('#uid').val();
         payload['arguments'].execute.inArguments = [{
             "tokens": authTokens,
             //UID
-            "emailAddress": "{{Contact.Attribute.PostcardJourney.EmailAddress}}"
+            "emailAddress": uid
         }];
 
         payload['metaData'].isConfigured = true;

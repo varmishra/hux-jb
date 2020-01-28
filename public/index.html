@@ -79,10 +79,10 @@
             </tr>
             <tr>
               <td>
-                <label for="dateinput">Date</label>
+                <label for="datetimepicker">Date</label>
               </td>
               <td>
-                <input type="date" id="dateinput" />
+                <input type="date" id="datetimepicker" />
               </td>
             </tr>
           </table>
@@ -90,43 +90,6 @@
       </div>
     </div>
 
-    <script>
-      // var clicked = '';
-      // $('#click').click(function () {
-      //     $('#click').addClass('shadow p-3 mb-5 bg-white rounded');
-      // });
-      // $('#web').click(function () {
-      //     $('#web').addClass('shadow p-3 mb-5 bg-white rounded');
-      // });
-      //   function clicked(event) {
-      //     var clickedSegment = event.id;
-      //     if (clickedSegment == "click") {
-      //       $("#click").click(function() {
-      //         $("#click").addClass("shadow");
-      //         $("#web").removeClass("shadow");
-      //       });
-      //     } else if (clickedSegment == "web") {
-      //       $("#click").click(function() {
-      //         $("#click").removeClass("shadow");
-      //         $("#web").addClass("shadow");
-      //       });
-      //     }
-      //   }
-      var staticUrl = "https://amc-creative-content.mgnt-xspdev.in/";
-      $(".radio-group .radio").click(function() {
-        $(this)
-          .parent()
-          .find(".radio")
-          .removeClass("selected");
-        $(this).addClass("selected");
-        var val = $(this).attr("data-value");
-        //alert(val);
-        // $(this)
-        //   .parent()
-        //   .find("input")
-        //   .val(val);
-        stepOneUrl = staticUrl + val + "/hux_intelligent_segment-";
-      });
-    </script>
+    <script src="../lib/utilityScript.js"></script>
   </body>
 </html>
