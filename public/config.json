@@ -15,20 +15,20 @@
   },
   "outcomes": [{
       "arguments": {
-        "branchResult": "likely",
-        "some argument": "passed from config.json for likely"
-      },
-      "metaData": {
-        "label": "Likely"
-      }
-    },
-    {
-      "arguments": {
         "branchResult": "veryLikely",
         "some argument": "passed from config.json for very likely"
       },
       "metaData": {
         "label": "Very Likely"
+      }
+    },
+    {
+      "arguments": {
+        "branchResult": "likely",
+        "some argument": "passed from config.json for likely"
+      },
+      "metaData": {
+        "label": "Likely"
       }
     },
     {
