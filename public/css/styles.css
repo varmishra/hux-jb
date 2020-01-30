@@ -5,6 +5,7 @@ body {
 
 .step {
     /* display: none; */
+    margin: 10px;
 }
 
 #step1 {
@@ -41,4 +42,38 @@ body {
 .radio.selected {
     border-color: blue;
     box-shadow: 3px 3px #a8a8a8;
+}
+
+.app {
+    background-color: #fafaf9;
+    height: 100vh;
+    overflow: scroll;
+    padding: 2rem;
+}
+
+.selLabel {
+    background-color: #fff;
+    border: 1px solid #dddbda;
+    display: inline-block;
+    background-color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    margin-right: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+    vertical-align: middle;
+    -ms-flex-pack: center;
+    justify-content: center;
+    /* border: 1px solid #dddbda; */
+    transition: border .15s linear;
+    /* border-color: #dddbda; */
+    /* background-color: #fff; */
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+input[type="radio"] {
+    visibility: hidden;
 }
