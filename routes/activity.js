@@ -82,7 +82,7 @@ exports.execute = function (req, res) {
     }
 
     if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
-      // var customerId = decoded.inArguments[0].emailAddress;
+      var customerId = decoded.inArguments[0].INDID;
       // var temp_url = customScript.fetchUrl();
       // var url = 'https://cors-anywhere.herokuapp.com/' + temp_url;
       // var url = "https://cors-anywhere.herokuapp.com/" + stepTwoUrl;
@@ -96,7 +96,7 @@ exports.execute = function (req, res) {
           for (i = 0; i < Object.keys(obj.content).length; i++) {
             if (obj.content[i].CUSTOMER_INDID == customerId) {
               return res.status(200).json({
-                branchResult: obj.content[i].ContentUrl
+                branchResult: obj.content[i].segmentValue
               });
             }
           }

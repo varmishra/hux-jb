@@ -53,7 +53,7 @@
   "arguments": {
     "execute": {
       "inArguments": [{
-        "emailAddress": "{{Contact.Attribute.CustomActivity.EmailAddress}}"
+        "INDID": "{{Contact.Attribute.DE.INDID}}"
       }],
       "outArguments": [],
       "url": "https://hux-jb.herokuapp.com/journeybuilder/execute",

@@ -71,7 +71,8 @@ body {
     /* border-color: #dddbda; */
     /* background-color: #fff; */
     cursor: pointer;
-    margin-left: 1rem;
+    margin-left: 2rem;
+    width: 106%;
 }
 
 input[type="radio"] {
