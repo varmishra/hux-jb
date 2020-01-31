@@ -138,13 +138,14 @@
         </header>
       </div>
 
-      <div class="row">
+      <div class="row radio-group">
         <div class="radio-toolbar col-2" style="padding-left: 0px;
     max-width: 13%;"> 
           <input type="radio" id="radioABC" name="radio" value="ABC" checked />
           <label
-            class="slds-button_neutral slds-m-right_medium selLabel"
+            class="slds-button_neutral slds-m-right_medium selLabel radio"
             for="radioABC"
+            data-value="click_conversion"
             >Click Conversion</label
           >
         </div>
@@ -152,8 +153,9 @@
     max-width: 13%;">
           <input type="radio" id="radioDEF" name="radio" value="ABC" checked />
           <label
-            class="slds-button_neutral slds-m-right_medium selLabel"
+            class="slds-button_neutral slds-m-right_medium selLabel radio"
             for="radioABC"
+            data-value="web_conversion"
             >Web Conversion</label
           >
         </div>
@@ -161,8 +163,9 @@
     max-width: 13%;">
           <input type="radio" id="radioXYZ" name="radio" value="ABC" checked />
           <label
-            class="slds-button_neutral slds-m-right_medium selLabel"
+            class="slds-button_neutral slds-m-right_medium selLabel radio"
             for="radioABC"
+            data-value="audience_segments"
             >Audience Segments</label
           >
         </div>
@@ -189,7 +192,7 @@
             <div class="slds-form-element__control">
               <input
                 type="date"
-                id="text-input-id-1"
+                id="datetimepicker"
                 class="slds-input"
                 placeholder="Enter Date"
               />
