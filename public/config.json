@@ -57,7 +57,7 @@
         "INDID": "{{Contact.Attribute.DE.INDID}}"
       }],
       "outArguments": [],
-      "url": "https://hux-jb.herokuapp.com/journeybuilder/execute",
+      "url": "https://hux-jb.herokuapp.com/activity/execute",
       "verb": "POST",
       "body": "",
       "header": "",
@@ -69,22 +69,22 @@
   "configurationArguments": {
     "applicationExtensionKey": "468dcc2d-369d-40c8-b9ce-c95095f4f0f9",
     "save": {
-      "url": "https://hux-jb.herokuapp.com/journeybuilder/save",
+      "url": "https://hux-jb.herokuapp.com/activity/save",
       "verb": "POST",
       "useJwt": true
     },
     "publish": {
-      "url": "https://hux-jb.herokuapp.com/journeybuilder/publish",
+      "url": "https://hux-jb.herokuapp.com/activity/publish",
       "verb": "POST",
       "useJwt": true
     },
     "stop": {
-      "url": "https://hux-jb.herokuapp.com/journeybuilder/stop",
+      "url": "https://hux-jb.herokuapp.com/activity/stop",
       "verb": "POST",
       "useJwt": true
     },
     "validate": {
-      "url": "https://hux-jb.herokuapp.com/journeybuilder/validate",
+      "url": "https://hux-jb.herokuapp.com/activity/validate",
       "verb": "POST",
       "useJwt": true
     }
