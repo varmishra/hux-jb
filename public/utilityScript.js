@@ -1,4 +1,4 @@
-var staticUrl = "https://amc-creative-content.mgnt-xspdev.in";
+var staticUrl = "https://amc-creative-content.mgnt-xspdev.in/intelligent-segments";
 window.stepTwoUrl = window.stepTwoUrl || "";
 $(".radio-group .radio").click(function () {
     $(this)
