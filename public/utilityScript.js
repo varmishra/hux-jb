@@ -20,7 +20,7 @@ $(document).on("change", "#datetimepicker", function () {
     day = date.getDate();
     month = date.getMonth() + 1;
     year = date.getFullYear();
-    stepTwoUrl = stepOneUrl + [day, month, year].join("-") + ".json";
+    stepTwoUrl = stepOneUrl + [month, day, year].join("_") + ".json";
     console.log(stepTwoUrl);
     localStorage.setItem("url", stepTwoUrl);
 });
