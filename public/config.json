@@ -56,7 +56,7 @@
     "execute": {
       "inArguments": [
         {
-          "INDID": "{{Contact.Attribute.Connected_Demo_DE.INDID}}"
+          "INDID": "{{Contact.Attribute.jb-activity-test.INDID}}"
         }
       ],
       "outArguments": [],
