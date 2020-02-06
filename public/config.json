@@ -14,8 +14,7 @@
       "step1Label": "Select Action"
     }
   },
-  "outcomes": [
-    {
+  "outcomes": [{
       "arguments": {
         "branchResult": "veryLikely",
         "some argument": "passed from config.json for very likely"
@@ -54,42 +53,40 @@
   ],
   "arguments": {
     "execute": {
-      "inArguments": [
-        {
-          "INDID": "{{Contact.Attribute.jb-activity-test.INDID}}"
-        }
-      ],
+      "inArguments": [{
+        "INDID": "{{Contact.Attribute.jb-activity-test.INDID}}"
+      }],
       "outArguments": [],
-      "url": "https://jb-activity-own.herokuapp.com/journeybuilder/execute",
+      "url": "https://jb-activity-own.herokuapp.com/execute",
       "verb": "POST",
       "body": "",
       "header": "",
       "format": "json",
-      "useJwt": true,
+      "useJwt": false,
       "timeout": 10000
     }
   },
   "configurationArguments": {
     "applicationExtensionKey": "f0a4d926-624e-4755-88c0-4a33a9086768",
     "save": {
-      "url": "https://jb-activity-own.herokuapp.com/journeybuilder/save",
+      "url": "https://jb-activity-own.herokuapp.com/save",
       "verb": "POST",
-      "useJwt": true
+      "useJwt": false
     },
     "publish": {
-      "url": "https://jb-activity-own.herokuapp.com/journeybuilder/publish",
+      "url": "https://jb-activity-own.herokuapp.com/publish",
       "verb": "POST",
-      "useJwt": true
+      "useJwt": false
     },
     "stop": {
-      "url": "https://jb-activity-own.herokuapp.com/journeybuilder/stop",
+      "url": "https://jb-activity-own.herokuapp.com/stop",
       "verb": "POST",
-      "useJwt": true
+      "useJwt": false
     },
     "validate": {
-      "url": "https://jb-activity-own.herokuapp.com/journeybuilder/validate",
+      "url": "https://jb-activity-own.herokuapp.com/validate",
       "verb": "POST",
-      "useJwt": true
+      "useJwt": false
     }
   },
   "userInterfaces": {
