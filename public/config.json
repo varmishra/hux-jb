@@ -57,7 +57,7 @@
         "INDID": "{{Contact.Attribute.jb-activity-test.INDID}}"
       }],
       "outArguments": [],
-      "url": "https://jb-activity-own.herokuapp.com/execute",
+      "url": "https://jb-activity-own.herokuapp.com/execute/",
       "verb": "POST",
       "body": "",
       "header": "",
@@ -69,22 +69,22 @@
   "configurationArguments": {
     "applicationExtensionKey": "f0a4d926-624e-4755-88c0-4a33a9086768",
     "save": {
-      "url": "https://jb-activity-own.herokuapp.com/save",
+      "url": "https://jb-activity-own.herokuapp.com/save/",
       "verb": "POST",
       "useJwt": false
     },
     "publish": {
-      "url": "https://jb-activity-own.herokuapp.com/publish",
+      "url": "https://jb-activity-own.herokuapp.com/publish/",
       "verb": "POST",
       "useJwt": false
     },
     "stop": {
-      "url": "https://jb-activity-own.herokuapp.com/stop",
+      "url": "https://jb-activity-own.herokuapp.com/stop/",
       "verb": "POST",
       "useJwt": false
     },
     "validate": {
-      "url": "https://jb-activity-own.herokuapp.com/validate",
+      "url": "https://jb-activity-own.herokuapp.com/validate/",
       "verb": "POST",
       "useJwt": false
     }
