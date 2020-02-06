@@ -6,7 +6,7 @@
     "iconSmall": "images/icon_small.png",
     "category": "flow"
   },
-  "type": "RESTDECISION",
+  "type": "REST",
   "lang": {
     "en-US": {
       "name": "Hux Decision",
