@@ -80,7 +80,7 @@ exports.execute = function (req, res) {
   //     console.error(err);
   //     return res.status(401).end();
   //   }
-
+  console.log("Hello");
   // if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
   var customerId = req.body.inArguments[0].INDID;
   console.log(customerId);
@@ -90,7 +90,7 @@ exports.execute = function (req, res) {
   url = "https://cors-anywhere.herokuapp.com/" + localStorage.getItem("url");
   fetch(url)
     .then(function (response) {
-      console.log(response);
+      // console.log(response);
       return response.json();
     })
     .then(function (obj) {
