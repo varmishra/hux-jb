@@ -56,7 +56,9 @@
       "inArguments": [{
         "INDID": "{{Contact.Attribute.jb-activity-test.INDID}}"
       }],
-      "outArguments": [],
+      "outArguments": [{
+        "branchResult": ""
+      }],
       "url": "https://jb-activity-own.herokuapp.com/journeybuilder/execute/",
       "verb": "POST",
       "body": "",
@@ -99,7 +101,13 @@
   "schema": {
     "arguments": {
       "execute": {
-        "inArguments": [],
+        "inArguments": [{
+          "INDID": {
+            "dataType": "Text",
+            "isNullable": false,
+            "direction": "in"
+          }
+        }],
         "outArguments": []
       }
     }

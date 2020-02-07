@@ -122,7 +122,8 @@ exports.save = function (req, res) {
 
 exports.execute = function (req, res) {
   logData(req);
-  res.send(200, req)
+  console.log(req.body.inArguments);
+  res.send(200);
 };
 
 /*
