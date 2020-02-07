@@ -122,9 +122,7 @@ exports.save = function (req, res) {
 
 exports.execute = function (req, res) {
   logData(req);
-  res.send(200).json({
-    "request": req
-  });
+  res.send(200, req)
 };
 
 /*
