@@ -54,7 +54,7 @@
   "arguments": {
     "execute": {
       "inArguments": [{
-        "INDID": "{{Contact.Attribute.jb-activity-test.INDID}}"
+        "INDID": "{{Contact.Attribute.jbActivity.INDID}}"
       }],
       "outArguments": [{
         "branchResult": ""
