@@ -3,7 +3,7 @@ var util = require("util");
 
 // Deps
 const Path = require("path");
-const JWT = require(Path.join(__dirname, "..", "lib", "jwtDecoder.js"));
+//const JWT = require(Path.join(__dirname, "..", "lib", "jwtDecoder.js"));
 //const customScript = require(Path.join(__dirname, '..', 'lib', 'utilityScript.js'));
 var util = require("util");
 var http = require("https");
@@ -72,53 +72,53 @@ exports.save = function (req, res) {
 /*
  * POST Handler for /execute/ route of Activity.
  */
-// exports.execute = function (req, res) {
-//   // example on how to decode JWT
-//   // JWT(req.body, process.env.jwtSecret, (err, decoded) => {
-//   //   // verification error -> unauthorized request
-//   //   if (err) {
-//   //     console.error(err);
-//   //     return res.status(401).end();
-//   //   }
-//   logData(req);
-//   res.send(200).json({
-//     "success": true
-//   })
-//   console.log("Hello");
-//   // if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
-//   var customerId = req.body.inArguments[0].INDID;
-//   console.log(customerId);
-//   // var temp_url = customScript.fetchUrl();
-//   // var url = 'https://cors-anywhere.herokuapp.com/' + temp_url;
-//   // var url = "https://cors-anywhere.herokuapp.com/" + stepTwoUrl;
-//   url = "https://cors-anywhere.herokuapp.com/" + localStorage.getItem("url");
-//   fetch(url)
-//     .then(function (response) {
-//       // console.log(response);
-//       return response.json();
-//     })
-//     .then(function (obj) {
-//       console.log(obj);
-//       var i;
-//       for (i = 0; i < Object.keys(obj.content).length; i++) {
-//         if (obj.content[i].CUSTOMER_INDID == customerId) {
-//           return res.status(200).json({
-//             branchResult: obj.content[i].segmentValue
-//           });
-//         }
-//       }
-//     })
-//     .catch(function (error) {
-//       console.error(error);
-//       return res.status(400).end();
-//     });
-//   // } 
-//   //   else {
-//   //     console.error("inArguments invalid.");
-//   //     return res.status(400).end();
-//   //   }
-//   // });
-// };
+exports.execute = function (req, res) {
+  // example on how to decode JWT
+  // JWT(req.body, process.env.jwtSecret, (err, decoded) => {
+  //   // verification error -> unauthorized request
+  //   if (err) {
+  //     console.error(err);
+  //     return res.status(401).end();
+  //   }
+  logData(req);
+  res.send(200).json({
+    "success": true
+  })
+  console.log("Hello");
+  // if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
+  var customerId = req.body.inArguments[0].INDID;
+  console.log(customerId);
+  // var temp_url = customScript.fetchUrl();
+  // var url = 'https://cors-anywhere.herokuapp.com/' + temp_url;
+  // var url = "https://cors-anywhere.herokuapp.com/" + stepTwoUrl;
+  url = "https://cors-anywhere.herokuapp.com/" + localStorage.getItem("url");
+  fetch(url)
+    .then(function (response) {
+      // console.log(response);
+      return response.json();
+    })
+    .then(function (obj) {
+      console.log(obj);
+      var i;
+      for (i = 0; i < Object.keys(obj.content).length; i++) {
+        if (obj.content[i].CUSTOMER_INDID == customerId) {
+          return res.status(200).json({
+            branchResult: "veryLikely"
+          });
+        }
+      }
+    })
+    .catch(function (error) {
+      console.error(error);
+      return res.status(400).end();
+    });
+  // } 
+  //   else {
+  //     console.error("inArguments invalid.");
+  //     return res.status(400).end();
+  //   }
+  // });
+};
 
 exports.execute = function (req, res) {
   logData(req);
@@ -134,7 +134,7 @@ exports.publish = function (req, res) {
   //console.log( req.body );
   logData(req);
   res.send(200).json({
-    "suceess": true
+    "success": true
   });
 };
 
